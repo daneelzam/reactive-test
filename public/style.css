@@ -54,7 +54,6 @@ body{
     justify-content: space-between;
     margin: 5px;
 }
-
 .btn {
     text-decoration: none;
     padding: 5px 15px;
@@ -67,13 +66,17 @@ body{
     color: #ecf0f1;
     transition: background-color .3s;
     cursor: pointer;
-  }
-  
-  .btn:hover, .btn:focus {
+}
+.btn:hover, .btn:focus {
     background-color: #3b72d1;
-  }
+}
 .column-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+@media screen and (max-width: 768px) { 
+    .card {
+        width: 90%;
+    }
 }

@@ -20,7 +20,7 @@ function App(props) {
     dispatch(getPostListFetchAC())
   },[dispatch])
   return (
-    <div>
+    <>
       <Router>
         <Switch>
           <Route exact path='/'><UserList/></Route>
@@ -29,7 +29,7 @@ function App(props) {
         </Switch>
       </Router>
       
-    </div>
+    </>
   );
 }
 

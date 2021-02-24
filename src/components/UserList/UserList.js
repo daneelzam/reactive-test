@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import CreateUser from '../CreateUser/CreateUser';
 import User from './User/User'
 
-function UserList(props) {
+function UserList() {
     const {userList} = useSelector( (state) => state)
 
     return (

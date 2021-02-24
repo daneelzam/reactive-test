@@ -3,14 +3,12 @@ import { Link } from 'react-router-dom';
 
 function User({user}) {
     return (
-        <li>
-            <div>
-                <span>Name: {user.name} </span>
+        <li className='card card-1'>
+                <h3>Name: {user.name} </h3>
                 <span>Email: {user.email} </span>
                 <span>Login: {user.username} </span>
-                <span><Link to={`/post/${user.id}`}>See Posts</Link></span>
-                <span><Link to={`/user/${user.id}`}>Edit</Link></span>
-            </div>
+                <span><Link className='btn' to={`/post/${user.id}`}>See Posts</Link></span>
+                <span><Link className='btn' to={`/user/${user.id}`}>Edit</Link></span>
         </li>
     );
 }

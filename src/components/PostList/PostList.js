@@ -13,22 +13,22 @@ function PostList() {
         history.push('/')
     }
     return (
-        <>
-        <button onClick={goBack}>Go back</button>
-        <div>
+        <div className='column-container'>
+        <div className='card card-form'>
             <span>Name: {user[0].name} </span>
             <span>Email: {user[0].email} </span>
             <span>Login: {user[0].username} </span>
+            <button className='btn' onClick={goBack}>Go back</button>
         </div>
+        <h1>Posts:</h1>
         <div>
-            Posts:
-            <ul>
+            <ul className='container'>
                 {postList && postList
                 .filter((post) => post.userId === +id)
                 .map((post) => <Post key={post.id} post={post}/>)}
             </ul>
         </div>
-        </>
+        </div>
     );
 }
 

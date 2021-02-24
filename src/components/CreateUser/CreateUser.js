@@ -17,11 +17,14 @@ function CreateUser() {
         dispatch(createUserAC(name, email, username, id))
     }
     return (
-        <form onSubmit={createUserHandler}>
-            Name: <input type='text' name='name' value={name} onChange={inputsHandler} required/>
-            Email <input type='email' name='email' value={email} onChange={inputsHandler} required/>
-            Login <input type='text' name='username' value={username} onChange={inputsHandler} required/>
-            <input type='submit'/>
+        <form className='container' onSubmit={createUserHandler}>
+        <fieldset className='container card card-form'>
+            <legend>Create new user</legend>
+            <span className='card-form-span'>Name: <input type='text' name='name' value={name} onChange={inputsHandler} required/></span>
+            <span className='card-form-span'>Email <input type='email' name='email' value={email} onChange={inputsHandler} required/></span>
+            <span className='card-form-span'>Login <input type='text' name='username' value={username} onChange={inputsHandler} required/></span>
+            <input className='btn' type='submit' value='create'/>
+        </fieldset>
         </form>
     );
 }

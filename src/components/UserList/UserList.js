@@ -7,12 +7,12 @@ function UserList(props) {
     const {userList} = useSelector( (state) => state)
 
     return (
-        <>
+        <div className='container'>
         <CreateUser/>
-        <ul>
+        <ul className='container'>
             {userList && userList.map(user => <User key={user.id} user={user}/>)}
         </ul>
-        </>
+        </div>
     );
 }
 

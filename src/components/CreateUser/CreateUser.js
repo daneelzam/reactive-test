@@ -14,7 +14,8 @@ function CreateUser() {
     const createUserHandler = (event) => {
         event.preventDefault();
         const id = newId() + 1;
-        dispatch(createUserAC(name, email, username, id))
+        dispatch(createUserAC(name, email, username, id));
+        setInputs({ name: '', email: '', username: '' })
     }
     return (
         <form className='container' onSubmit={createUserHandler}>
